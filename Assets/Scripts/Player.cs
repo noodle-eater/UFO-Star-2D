@@ -27,14 +27,14 @@ namespace NoodleEater
 
         private void OnCollisionEnter2D(Collision2D other)
         {
-            Coin coin = other.gameObject.GetComponent<Coin>();
+            Star star = other.gameObject.GetComponent<Star>();
 
-            if (coin == null) return;
+            if (star == null) return;
             
-            _score += coin.Score;
+            _score += star.GetScore();
             
             _scoreUI.SetScore(_score);
-            _audioPlayer.PlayCollectCoin();
+            _audioPlayer.PlayCollectStar();
         }
 
         private void Move()
