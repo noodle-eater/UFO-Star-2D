@@ -4,18 +4,16 @@ using Random = UnityEngine.Random;
 
 namespace NoodleEater
 {
-    public class Coin : MonoBehaviour
+    public class Star : MonoBehaviour
     {
         [SerializeField] private int score = 10;
         [SerializeField] private Vector2 upperBound;
         [SerializeField] private Vector2 lowerBound;
-        
-        public int Score => score;
 
-        // private void OnTriggerEnter2D(Collider2D other)
-        // {
-        //     transform.position = new Vector3(GetRandomXPosition(), GetRandomYPosition(), 0);
-        // }
+        public int GetScore()
+        {
+            return score;
+        }
 
         private void OnCollisionEnter2D(Collision2D other)
         {
