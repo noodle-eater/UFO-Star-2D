@@ -6,7 +6,7 @@ namespace NoodleEater
     {
         [SerializeField] private AudioSource collectStarAudio;
 
-        public void PlayCollectCoin()
+        public void PlayCollectStar()
         {
             if (collectStarAudio)
             {
