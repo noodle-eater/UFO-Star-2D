@@ -1,5 +1,4 @@
-﻿using System;
-using UnityEngine;
+﻿using UnityEngine;
 using Random = UnityEngine.Random;
 
 namespace NoodleEater
@@ -16,6 +15,11 @@ namespace NoodleEater
         }
 
         private void OnCollisionEnter2D(Collision2D other)
+        {
+            MoveToRandomPosition();
+        }
+
+        private void MoveToRandomPosition()
         {
             transform.position = new Vector3(GetRandomXPosition(), GetRandomYPosition(), 0);
         }

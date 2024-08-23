@@ -1,6 +1,3 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 namespace NoodleEater
@@ -26,6 +23,11 @@ namespace NoodleEater
         }
 
         private void OnCollisionEnter2D(Collision2D other)
+        {
+            CollectStar(other);
+        }
+
+        private void CollectStar(Collision2D other)
         {
             Star star = other.gameObject.GetComponent<Star>();
 
